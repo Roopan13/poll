@@ -1,0 +1,20 @@
+{% extends 'vote/base.html' %}
+{% load static %}
+
+{% block content %} 
+
+<h4 class="alert alert-info">{{poll.question}}</h4>
+
+<div class="res">
+    <h5>{{poll.option_one}} &mdash; <strong> {{poll.option_one_count}}</strong></h5> <hr><hr>
+    <h5>{{poll.option_two}} &mdash; <strong> {{poll.option_two_count}}</strong></h5> <hr><hr>
+    <h5>{{poll.option_three}} &mdash; <strong> {{poll.option_three_count}}</strong></h5> <hr><hr>
+</div>
+
+<h5>Total  &mdash; <strong> {{poll.total}}
+</h5>
+
+<a href="{% url 'home' %}" class="btn btn-danger mt-3">Go Back</a>
+
+
+{% endblock content %}

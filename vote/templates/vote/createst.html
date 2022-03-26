@@ -1,0 +1,28 @@
+{% extends 'vote/base.html' %}
+{% load static %}
+
+{% block content %} 
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <h4 class="mb-3">{{Poll.question}}</h4>
+        <div class="radio mb-3">
+            <label>
+                <input type="radio" name="poll" value="option_one" required>{{Poll.option_one}}
+            </label> &nbsp;
+            <label>
+                <input type="radio" name="poll" value="option_two" >{{Poll.option_two}}
+            </label> &nbsp;
+            <label>
+                <input type="radio" name="poll" value="option_three">{{Poll.option_three}}
+            </label> &nbsp;
+            </label>
+        </div>
+    </div>
+    <input type="submit" class="btn btn-success" value="Submit Your Poll" >
+
+
+
+
+
+{% endblock content %}

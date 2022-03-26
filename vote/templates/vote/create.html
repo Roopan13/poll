@@ -1,0 +1,10 @@
+{% extends 'vote/base.html' %}
+{% load static %}
+
+{% block content %} 
+<h3>Create Page</h3>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="btn btn-success" value="Submit" >
+{% endblock content %}
